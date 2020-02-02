@@ -1,4 +1,4 @@
-package br.edu.iff.dominio;
+package br.edu.iff.dominio.repository;
 
 /**
  * Repository
