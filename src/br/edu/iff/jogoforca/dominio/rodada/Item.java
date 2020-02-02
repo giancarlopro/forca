@@ -1,7 +1,6 @@
 package br.edu.iff.jogoforca.dominio.rodada;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import br.edu.iff.dominio.ObjetoDominioImpl;
