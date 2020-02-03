@@ -1,4 +1,4 @@
-package br.edu.iff.bancodepalavras.dominio.palavra;
+package br.edu.iff.bancodepalavras.dominio.palavra.repository;
 
 import java.util.List;
 
