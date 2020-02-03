@@ -85,7 +85,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
     @Override
     public void atualizar(Palavra palavra) throws RepositoryException {
         if (!pool.removeIf((Palavra word) -> word.getId().equals(palavra.getId()))) {
-            throw new RepositoryException("palavra não pode ser atualizada");
+            throw new RepositoryException("palavra não pôde ser atualizada");
         }
 
         pool.add(palavra);
@@ -94,7 +94,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
     @Override
     public void remover(Palavra palavra) throws RepositoryException {
         if (!pool.removeIf((Palavra word) -> word.getId().equals(palavra.getId()))) {
-            throw new RepositoryException("palavra não pode removida");
+            throw new RepositoryException("palavra não pôde ser removida");
         }
     }
 }
