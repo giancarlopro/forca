@@ -77,18 +77,24 @@ public class MemoriaPalavraRepository implements PalavraRepository {
     @Override
     public void inserir(Palavra palavra) throws RepositoryException {
         if (pool.contains(palavra))
-            throw new RepositoryException();
+            throw new RepositoryException("palavra já está no repositório");
     
         pool.add(palavra);
     }
 
     @Override
     public void atualizar(Palavra palavra) throws RepositoryException {
-        // TODO Auto-generated method stub
+        if (!pool.removeIf((Palavra word) -> word.getId().equals(palavra.getId()))) {
+            throw new RepositoryException("palavra não pode ser atualizada");
+        }
+
+        pool.add(palavra);
     }
 
     @Override
     public void remover(Palavra palavra) throws RepositoryException {
-        // TODO Auto-generated method stub
+        if (!pool.removeIf((Palavra word) -> word.getId().equals(palavra.getId()))) {
+            throw new RepositoryException("palavra não pode removida");
+        }
     }
 }
