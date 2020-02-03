@@ -7,12 +7,12 @@ import br.edu.iff.bancodepalavras.dominio.letra.LetraFactoryImpl;
  * LetraImagemFactory
  */
 public class LetraImagemFactory extends LetraFactoryImpl {
-    private LetraImagemFactory soleInstance = null;
+    private static LetraImagemFactory soleInstance = null;
 
     /**
      * @return the soleInstance
      */
-    public LetraImagemFactory getSoleInstance() {
+    public static LetraImagemFactory getSoleInstance() {
         if (soleInstance == null)
             soleInstance = new LetraImagemFactory();
 
