@@ -1,11 +1,11 @@
-package br.edu.iff.bancodepalavras.dominio.palavra.repository.bdr;
+package br.edu.iff.bancodepalavras.dominio.palavra.bdrelacional;
 
 import java.util.List;
 
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
-import br.edu.iff.bancodepalavras.dominio.palavra.repository.PalavraRepository;
+import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
-import br.edu.iff.dominio.repository.RepositoryException;
+import br.edu.iff.dominio.RepositoryException;
 
 /**
  * BDRPalavraRepository

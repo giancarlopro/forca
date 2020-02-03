@@ -1,10 +1,10 @@
-package br.edu.iff.bancodepalavras.dominio.palavra.factory;
+package br.edu.iff.bancodepalavras.dominio.palavra;
 
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
-import br.edu.iff.bancodepalavras.dominio.palavra.repository.PalavraRepository;
+import br.edu.iff.bancodepalavras.dominio.palavra.PalavraRepository;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.dominio.EntityFactory;
-import br.edu.iff.dominio.repository.RepositoryException;
+import br.edu.iff.dominio.RepositoryException;
 
 /**
  * PalavraFactoryImpl

@@ -1,6 +1,6 @@
 package br.edu.iff.dominio;
 
-import br.edu.iff.dominio.repository.Repository;
+import br.edu.iff.dominio.Repository;
 
 /**
  * EntityFactory

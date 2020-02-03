@@ -1,4 +1,4 @@
-package br.edu.iff.dominio.repository;
+package br.edu.iff.dominio;
 
 /**
  * RepositoryException

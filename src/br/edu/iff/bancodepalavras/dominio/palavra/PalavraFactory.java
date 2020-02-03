@@ -1,4 +1,4 @@
-package br.edu.iff.bancodepalavras.dominio.palavra.factory;
+package br.edu.iff.bancodepalavras.dominio.palavra;
 
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
