@@ -7,6 +7,20 @@ import br.edu.iff.jogoforca.dominio.boneco.BonecoFactory;
  * BonecoTextoFactory
  */
 public class BonecoTextoFactory implements BonecoFactory {
+    private static BonecoTextoFactory soleInstance = null;
+
+    /**
+     * @return the soleInstance
+     */
+    public static BonecoTextoFactory getSoleInstance() {
+        if (soleInstance == null)
+            soleInstance = new BonecoTextoFactory();
+
+        return soleInstance;
+    }
+
+    private BonecoTextoFactory() {}
+
     @Override
     public Boneco getBoneco() {
         return BonecoTexto.getSoleInstance();

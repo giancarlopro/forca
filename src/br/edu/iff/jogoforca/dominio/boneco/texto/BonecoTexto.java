@@ -18,8 +18,7 @@ public class BonecoTexto implements Boneco {
         return soleInstance;
     }
 
-    private BonecoTexto() {
-    }
+    private BonecoTexto() {}
 
     @Override
     public void exibir(Object contexto, int partes) {
