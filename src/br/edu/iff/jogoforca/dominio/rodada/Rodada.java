@@ -247,8 +247,10 @@ public class Rodada extends ObjetoDominioImpl {
     }
 
     public void exibirItens(Object contexto) {
-        for (Item item: itens)
+        for (Item item: itens) {
             item.exibir(contexto);
+            System.out.println();
+        }
     }
 
     public void exibirBoneco(Object contexto) {
