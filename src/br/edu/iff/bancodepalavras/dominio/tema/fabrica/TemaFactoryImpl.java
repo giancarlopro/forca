@@ -21,7 +21,7 @@ public class TemaFactoryImpl extends EntityFactory implements TemaFactory {
         return soleInstance;
     }
     
-    protected TemaFactoryImpl(TemaRepository repository) {
+    private TemaFactoryImpl(TemaRepository repository) {
         super(repository);
     }
 
