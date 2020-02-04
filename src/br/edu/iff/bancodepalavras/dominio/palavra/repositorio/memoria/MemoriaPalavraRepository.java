@@ -52,7 +52,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
         List<Palavra> result = new ArrayList<>();
 
         for (Palavra palavra: pool) {
-            if (palavra.getTema().equals(tema))
+            if (palavra.getTema() == tema)
                 result.add(palavra);
         }
 
