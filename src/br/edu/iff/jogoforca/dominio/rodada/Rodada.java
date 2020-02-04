@@ -258,8 +258,10 @@ public class Rodada extends ObjetoDominioImpl {
     }
 
     public void exibirPalavras(Object contexto) {
-        for (Palavra palavra: getPalavras())
+        for (Palavra palavra: getPalavras()) {
             palavra.exibir(contexto);
+            System.out.println();
+        }
     }
 
     public int getQtdeTentativaRestantes() {
