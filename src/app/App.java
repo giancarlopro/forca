@@ -82,6 +82,7 @@ public class App {
 
         if (rodada.descobriu()) {
             println("Parabéns, você descobriu!");
+            rodada.exibirPalavras(null);
         } else {
             println("Que pena, não foi dessa vez.");
         }
