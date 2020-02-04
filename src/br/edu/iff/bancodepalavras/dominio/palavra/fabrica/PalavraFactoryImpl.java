@@ -24,9 +24,6 @@ public class PalavraFactoryImpl extends EntityFactory implements PalavraFactory 
     }
 
     public static void createSoleInstance(PalavraRepository repository) {
-        if (soleInstance != null)
-            throw new RuntimeException("createSoleInstance só pode ser chamado uma vez");
-
         soleInstance = new PalavraFactoryImpl(repository);
     }
 
