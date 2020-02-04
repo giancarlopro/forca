@@ -1,5 +1,6 @@
 package br.edu.iff.dominio;
 
+import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
 import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactory;
 import br.edu.iff.bancodepalavras.dominio.palavra.fabrica.PalavraFactoryImpl;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaFactory;
@@ -10,6 +11,7 @@ import br.edu.iff.dominio.repositorio.dbrelacional.DBRRepositoryFactory;
 import br.edu.iff.dominio.repositorio.memoria.MemoriaRepositoryFactory;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorFactory;
 import br.edu.iff.jogoforca.dominio.jogador.fabrica.JogadorFactoryImpl;
+import br.edu.iff.jogoforca.dominio.rodada.Rodada;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaFactory;
 import br.edu.iff.jogoforca.dominio.rodada.fabrica.RodadaSorteioFactory;
 
@@ -70,6 +72,8 @@ public class Aplicacao {
         TemaFactoryImpl.createSoleInstance(repositoryFactory.getTemaRepository());
         PalavraFactoryImpl.createSoleInstance(repositoryFactory.getPalavraRepository());
         JogadorFactoryImpl.createSoleInstance(repositoryFactory.getJogadorRepository());
+        Palavra.setLetraFactory(elementoGraficoFactory);
+        Rodada.setBonecoFactory(elementoGraficoFactory);
     }
 
     public String[] getTiposRepositoryFactory() {
