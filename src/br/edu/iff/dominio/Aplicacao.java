@@ -39,6 +39,7 @@ public class Aplicacao {
     private RodadaFactory rodadaFactory;
 
     private Aplicacao() {
+        setup();
     }
 
     public void setup() {
