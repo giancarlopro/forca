@@ -38,11 +38,17 @@ public class BDRRodadaRepository implements RodadaRepository {
     }
 
     @Override
-    public void inserir(Rodada rodada) throws RepositoryException {}
+    public void inserir(Rodada rodada) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void atualizar(Rodada rodada) throws RepositoryException {}
+    public void atualizar(Rodada rodada) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void remover(Rodada rodada) throws RepositoryException {}
+    public void remover(Rodada rodada) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 }

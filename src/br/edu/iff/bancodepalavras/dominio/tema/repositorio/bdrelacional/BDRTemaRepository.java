@@ -42,11 +42,17 @@ public class BDRTemaRepository implements TemaRepository {
     }
 
     @Override
-    public void inserir(Tema tema) throws RepositoryException {}
+    public void inserir(Tema tema) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void atualizar(Tema tema) throws RepositoryException {}
+    public void atualizar(Tema tema) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void remover(Tema tema) throws RepositoryException {}
+    public void remover(Tema tema) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 }

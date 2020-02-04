@@ -51,11 +51,17 @@ public class BDRPalavraRepository implements PalavraRepository {
     }
 
     @Override
-    public void inserir(Palavra palavra) throws RepositoryException {}
+    public void inserir(Palavra palavra) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void atualizar(Palavra palavra) throws RepositoryException {}
+    public void atualizar(Palavra palavra) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void remover(Palavra palavra) throws RepositoryException {}
+    public void remover(Palavra palavra) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 }

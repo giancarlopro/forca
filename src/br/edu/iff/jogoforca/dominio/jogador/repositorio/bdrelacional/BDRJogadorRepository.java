@@ -35,11 +35,17 @@ public class BDRJogadorRepository implements JogadorRepository {
     }
 
     @Override
-    public void inserir(Jogador jogador) throws RepositoryException {}
+    public void inserir(Jogador jogador) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void atualizar(Jogador jogador) throws RepositoryException {}
+    public void atualizar(Jogador jogador) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 
     @Override
-    public void remover(Jogador jogador) throws RepositoryException {}
+    public void remover(Jogador jogador) throws RepositoryException {
+        throw new RepositoryException("Não implementado");
+    }
 }
