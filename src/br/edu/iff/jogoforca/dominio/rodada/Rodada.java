@@ -203,9 +203,8 @@ public class Rodada extends ObjetoDominioImpl {
     }
 
     private void atualizarPontosDoJogador() {
-        // TODO: jogador.setPontuacao tem visibilidade de pacote e aqui não é do mesmo pacote
-        // int pontos = jogador.getPontuacao();
-        // jogador.setPontuacao
+        int pontos = jogador.getPontuacao();
+        jogador.setPontuacao(pontos + calcularPontos());
     }
 
     public void tentar(char codigo) {

@@ -40,7 +40,7 @@ public class Jogador extends ObjetoDominioImpl {
         return pontuacao;
     }
 
-    void setPontuacao(int pontuacao) {
+    public void setPontuacao(int pontuacao) {
         this.pontuacao = pontuacao;
     }
 }

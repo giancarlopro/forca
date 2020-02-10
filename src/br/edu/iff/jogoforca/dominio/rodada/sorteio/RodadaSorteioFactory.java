@@ -27,6 +27,9 @@ public class RodadaSorteioFactory extends RodadaFactoryImpl {
     }
 
     public static RodadaSorteioFactory getSoleInstance() {
+        if (soleInstance == null)
+            throw new RuntimeException("createSoleInstance deve ser chamando antes de getSoleInstance");
+
         return soleInstance;
     }
 

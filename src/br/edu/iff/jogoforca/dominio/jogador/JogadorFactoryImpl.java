@@ -17,6 +17,9 @@ public class JogadorFactoryImpl extends EntityFactory implements JogadorFactory 
     }
 
     public static JogadorFactoryImpl getSoleInstance() {
+        if (soleInstance == null)
+            throw new RuntimeException("createSoleInstance deve ser chamando antes de getSoleInstance");
+
         return soleInstance;
     }
 

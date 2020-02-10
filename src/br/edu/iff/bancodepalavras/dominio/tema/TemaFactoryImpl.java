@@ -18,6 +18,9 @@ public class TemaFactoryImpl extends EntityFactory implements TemaFactory {
     }
 
     public static TemaFactoryImpl getSoleInstance() {
+        if (soleInstance == null)
+            throw new RuntimeException("createSoleInstance deve ser chamando antes de getSoleInstance");
+
         return soleInstance;
     }
     
