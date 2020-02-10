@@ -5,14 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 import br.edu.iff.bancodepalavras.dominio.letra.Letra;
-import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactory;
+import br.edu.iff.bancodepalavras.dominio.palavra.PalavraAppService;
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
-import br.edu.iff.bancodepalavras.dominio.tema.TemaFactory;
+import br.edu.iff.bancodepalavras.dominio.tema.TemaAppService;
 import br.edu.iff.jogoforca.Aplicacao;
 import br.edu.iff.jogoforca.dominio.jogador.Jogador;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorFactory;
 import br.edu.iff.jogoforca.dominio.rodada.Rodada;
-import br.edu.iff.jogoforca.dominio.rodada.RodadaFactory;
+import br.edu.iff.jogoforca.dominio.rodada.RodadaAppService;
 
 public class App {
     public static void print(String message) {
@@ -32,18 +32,19 @@ public class App {
         Aplicacao aplicacao = Aplicacao.getSoleInstance();
 
         JogadorFactory jogadorFactory = aplicacao.getJogadorFactory();
-        RodadaFactory rodadaFactory = aplicacao.getRodadaFactory();
-        TemaFactory temaFactory = aplicacao.getTemaFactory();
 
-        Tema tema = temaFactory.getTema("Cores");
+        TemaAppService temaAppService = TemaAppService.getSoleInstance();
+        Tema tema = temaAppService.novoTema("Cores");
 
-        PalavraFactory palavraFactory = aplicacao.getPalavraFactory();
-        palavraFactory.getPalavra("azul", tema);
-        palavraFactory.getPalavra("amarelo", tema);
-        palavraFactory.getPalavra("verde", tema);
+        PalavraAppService palavraAppService = PalavraAppService.getSoleInstance();
+        palavraAppService.novaPalavra("azul", tema);
+        palavraAppService.novaPalavra("amarelo", tema);
+        palavraAppService.novaPalavra("verde", tema);
 
         Jogador jogador = jogadorFactory.getJogador("Giancarlo");
-        Rodada rodada = rodadaFactory.getRodada(jogador);
+
+        RodadaAppService rodadaAppService = RodadaAppService.getSoleInstance();
+        Rodada rodada = rodadaAppService.novaRodada(jogador);
 
         while (!rodada.encerrou()) {
             println("Tema: " + rodada.getTema().getNome());

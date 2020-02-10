@@ -1,13 +1,16 @@
 package br.edu.iff.jogoforca;
 
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
+import br.edu.iff.bancodepalavras.dominio.palavra.PalavraAppService;
 import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactory;
 import br.edu.iff.bancodepalavras.dominio.palavra.PalavraFactoryImpl;
+import br.edu.iff.bancodepalavras.dominio.tema.TemaAppService;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaFactory;
 import br.edu.iff.bancodepalavras.dominio.tema.TemaFactoryImpl;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorFactory;
 import br.edu.iff.jogoforca.dominio.jogador.JogadorFactoryImpl;
 import br.edu.iff.jogoforca.dominio.rodada.Rodada;
+import br.edu.iff.jogoforca.dominio.rodada.RodadaAppService;
 import br.edu.iff.jogoforca.dominio.rodada.RodadaFactory;
 import br.edu.iff.jogoforca.dominio.rodada.sorteio.RodadaSorteioFactory;
 import br.edu.iff.jogoforca.embdr.DBRRepositoryFactory;
@@ -74,6 +77,9 @@ public class Aplicacao {
         JogadorFactoryImpl.createSoleInstance(repositoryFactory.getJogadorRepository());
         Palavra.setLetraFactory(elementoGraficoFactory);
         Rodada.setBonecoFactory(elementoGraficoFactory);
+        PalavraAppService.createSoleInstance(repositoryFactory.getPalavraRepository(), PalavraFactoryImpl.getSoleInstance());
+        TemaAppService.createSoleInstance(repositoryFactory.getTemaRepository(), TemaFactoryImpl.getSoleInstance());
+        RodadaAppService.createSoleInstance(rodadaFactory, repositoryFactory.getRodadaRepository(), repositoryFactory.getJogadorRepository());
     }
 
     public String[] getTiposRepositoryFactory() {

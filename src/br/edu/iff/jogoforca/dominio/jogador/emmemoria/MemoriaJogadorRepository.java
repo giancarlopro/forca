@@ -38,7 +38,7 @@ public class MemoriaJogadorRepository implements JogadorRepository {
                 return jogador;
         }
 
-        throw new RuntimeException("id inexistente");
+        return null;
     }
 
     @Override
@@ -48,7 +48,7 @@ public class MemoriaJogadorRepository implements JogadorRepository {
                 return jogador;
         }
 
-        throw new RuntimeException("jogador inexistente");
+        return null;
     }
 
     @Override

@@ -39,7 +39,7 @@ public class MemoriaTemaRepository implements TemaRepository {
                 return tema;
         }
 
-        throw new RuntimeException("id inexistente");
+        return null;
     }
 
     @Override
@@ -64,7 +64,7 @@ public class MemoriaTemaRepository implements TemaRepository {
     public void inserir(Tema tema) throws RepositoryException {
         if (pool.contains(tema))
             throw new RepositoryException("tema já está no repositório");
-    
+
         pool.add(tema);
     }
 

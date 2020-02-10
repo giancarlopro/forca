@@ -44,7 +44,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
                 return palavra;
         }
 
-        throw new RuntimeException("id inexistente");
+        return null;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class MemoriaPalavraRepository implements PalavraRepository {
                 return word;
         }
 
-        throw new RuntimeException("palavra não encontrada");
+        return null;
     }
 
     @Override
