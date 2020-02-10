@@ -4,8 +4,8 @@ import java.util.List;
 
 import br.edu.iff.bancodepalavras.dominio.tema.Tema;
 import br.edu.iff.bancodepalavras.dominio.palavra.Palavra;
-import br.edu.iff.dominio.Repository;
-import br.edu.iff.dominio.RepositoryException;
+import br.edu.iff.repository.Repository;
+import br.edu.iff.repository.RepositoryException;
 
 /**
  * PalavraRepository

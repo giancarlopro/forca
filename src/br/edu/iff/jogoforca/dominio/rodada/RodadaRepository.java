@@ -2,9 +2,9 @@ package br.edu.iff.jogoforca.dominio.rodada;
 
 import java.util.List;
 
-import br.edu.iff.dominio.Repository;
-import br.edu.iff.dominio.RepositoryException;
 import br.edu.iff.jogoforca.dominio.jogador.Jogador;
+import br.edu.iff.repository.Repository;
+import br.edu.iff.repository.RepositoryException;
 
 /**
  * RodadaRepository

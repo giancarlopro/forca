@@ -1,7 +1,7 @@
 package br.edu.iff.jogoforca.dominio.jogador;
 
-import br.edu.iff.dominio.Repository;
-import br.edu.iff.dominio.RepositoryException;
+import br.edu.iff.repository.Repository;
+import br.edu.iff.repository.RepositoryException;
 
 /**
  * JogadorRepository

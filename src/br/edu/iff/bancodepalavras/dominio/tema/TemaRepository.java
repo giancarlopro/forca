@@ -2,8 +2,8 @@ package br.edu.iff.bancodepalavras.dominio.tema;
 
 import java.util.List;
 
-import br.edu.iff.dominio.Repository;
-import br.edu.iff.dominio.RepositoryException;
+import br.edu.iff.repository.Repository;
+import br.edu.iff.repository.RepositoryException;
 
 /**
  * TemaRepository
